@@ -3,10 +3,13 @@
 namespace App\Entity;
 
 use App\Repository\CommentRepository;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Comment
 {
@@ -94,16 +97,24 @@ class Comment
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreatedAt(): ?DateTimeInterface
     {
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    public function setCreatedAt(DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue(): void
+    {
+        $this->createdAt = new DateTime();
     }
 
     public function getConference(): ?Conference
