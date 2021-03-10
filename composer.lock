@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0863a6c40e436bddb05fd9a88ddef6d9",
+    "content-hash": "3e51dabd349e1c2e24119f222854590e",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -7446,16 +7446,16 @@
         },
         {
             "name": "symfony/browser-kit",
-            "version": "v5.2.3",
+            "version": "v5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "b03b2057ed53ee4eab2e8f372084d7722b7b8ffd"
+                "reference": "d528d7fb4570548c3419ee9acb4b231082b6801c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/b03b2057ed53ee4eab2e8f372084d7722b7b8ffd",
-                "reference": "b03b2057ed53ee4eab2e8f372084d7722b7b8ffd",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/d528d7fb4570548c3419ee9acb4b231082b6801c",
+                "reference": "d528d7fb4570548c3419ee9acb4b231082b6801c",
                 "shasum": ""
             },
             "require": {
@@ -7510,7 +7510,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-27T12:56:27+00:00"
+            "time": "2021-02-22T06:55:17+00:00"
         },
         {
             "name": "symfony/css-selector",
