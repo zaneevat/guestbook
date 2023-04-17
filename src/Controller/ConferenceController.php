@@ -50,8 +50,7 @@ class ConferenceController extends AbstractController
         CommentRepository $commentRepository,
         NotifierInterface $notifier,
         #[Autowire('%photo_dir%')] string $photoDir,
-    ): Response
-    {
+    ): Response {
         $comment = new Comment();
         $form = $this->createForm(CommentFormType::class, $comment);
         $form->handleRequest($request);
@@ -60,7 +59,7 @@ class ConferenceController extends AbstractController
             if ($photo = $form['photo']->getData()) {
                 $filename = bin2hex(random_bytes(6)).'.'.$photo->guessExtension();
                 try {
-                    $photo->move($photoDir,$filename);
+                    $photo->move($photoDir, $filename);
                 } catch (FileException $e) {
                 }
                 $comment->setPhotoFilename($filename);
